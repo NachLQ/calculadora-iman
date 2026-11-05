@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo · Calculadora Imán</title>
+  <style>
+    :root { --bg: #f8fafc; --ink: #0f172a; --muted: #64748b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+           background: var(--bg); color: var(--ink); }
+    header { text-align: center; padding: 48px 20px 16px; }
+    header h1 { margin: 0 0 8px; font-size: 30px; }
+    header p { margin: 0 auto; max-width: 620px; color: var(--muted); font-size: 16px; }
+    .snippet { max-width: 760px; margin: 24px auto; background: #0f172a; color: #e2e8f0;
+               padding: 16px 18px; border-radius: 12px; font-family: ui-monospace, Menlo, monospace;
+               font-size: 13px; overflow-x: auto; }
+    .grid { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            max-width: 1200px; margin: 24px auto 64px; padding: 0 20px; }
+    .col h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted);
+              text-align: center; margin-bottom: 14px; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
+    a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎯 Calculadora Imán — Demo en vivo</h1>
+    <p>Estas tres calculadoras están <strong>embebidas en esta misma página</strong> con un simple
+       <code>&lt;script&gt;</code>. Juega con los parámetros: verás el precio estimado solo tras dejar tu contacto.</p>
+    <div class="snippet">&lt;script src="http://localhost:8765/widget/calculadora-iman.js" data-id="reforma-bano"&gt;&lt;/script&gt;
+&lt;div id="calculadora-iman"&gt;&lt;/div&gt;</div>
+  </header>
+
+  <div class="grid">
+    <div class="col">
+      <h2>Reforma de baño</h2>
+      <div id="calc-reforma"></div>
+      <script src="/widget/calculadora-iman.js" data-id="reforma-bano" data-target="calc-reforma"></script>
+    </div>
+    <div class="col">
+      <h2>Coaching de negocio</h2>
+      <div id="calc-coaching"></div>
+      <script src="/widget/calculadora-iman.js" data-id="coaching-negocio" data-target="calc-coaching"></script>
+    </div>
+    <div class="col">
+      <h2>Mantenimiento de climatización</h2>
+      <div id="calc-clima"></div>
+      <script src="/widget/calculadora-iman.js" data-id="mantenimiento-clima" data-target="calc-clima"></script>
+    </div>
+  </div>
+
+  <footer>
+    Páginas standalone:
+    <a href="/c/reforma-bano">/c/reforma-bano</a> ·
+    <a href="/c/coaching-negocio">/c/coaching-negocio</a> ·
+    <a href="/c/mantenimiento-clima">/c/mantenimiento-clima</a>
+    &nbsp;·&nbsp; Panel de administración en <a href="http://localhost:5173">localhost:5173</a>
+  </footer>
+</body>
+</html>

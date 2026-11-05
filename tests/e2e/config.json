@@ -1,0 +1,14 @@
+{
+  "slug": "calculadora-iman",
+  "sub": "client",
+  "main": "/",
+  "internal": "button:Bandeja de leads",
+  "port": 5311,
+  "apiPort": 4311,
+  "server": true,
+  "tabs": [
+    "Calculadoras",
+    "Bandeja de leads",
+    "Estadísticas"
+  ]
+}
